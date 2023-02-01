@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<section class="vh-200 bg-image"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+
+                            <h2 class="text-uppercase text-center mb-5">Edit facility</h2>
+
+                            <form action="@{/facility/update}"  method="post">
+                                <input type="hidden" name="id" >
+                                <div class="form-outline mb-4">
+                                    <label class="form-label">FacilityType</label>
+                                    <input  class="form-select" style="width: 300px"
+                                           readonly>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="text" class="form-control form-control-lg"/>
+                                    <label class="form-label">Name</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="text" class="form-control form-control-lg"/>
+                                    <label class="form-label">Area</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="text" class="form-control form-control-lg"/>
+                                    <label class="form-label">Cost</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="text" class="form-control form-control-lg"/>
+                                    <label class="form-label">Max People</label>
+                                </div>
+                                <div class="form-outline mb-4" id="standardRoom">
+                                    <input type="text"  class="form-control form-control-lg"/>
+                                    <label class="form-label">Standard Room</label>
+                                </div>
+                                <div class="form-outline mb-4" id="descriptionOtherConvenience">
+                                    <input type="text"
+                                           class="form-control form-control-lg"/>
+                                    <label class="form-label">Description Other Convenience</label>
+                                </div>
+                                <div class="form-outline mb-4" id="poolArea">
+                                    <input type="text"  class="form-control form-control-lg"/>
+                                    <label class="form-label">Pool Area</label>
+                                </div>
+                                <div class="form-outline mb-4" id="numberOfFloors">
+                                    <input type="text"
+                                           class="form-control form-control-lg"/>
+                                    <label class="form-label">Number Of Floors</label>
+                                </div>
+                                <div class="form-outline mb-4" id="facilityFrees">
+                                    <input type="text"  class="form-control form-control-lg"/>
+                                    <label class="form-label">Facility Free</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label">Rent Type</label>
+                                    <select>
+                                        <option>Year</option>
+                                        <option>Month</option>
+                                        <option>Day</option>
+                                        <option>Hour</option>
+                                    </select>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit"
+                                            class="btn btn-outline-success btn-block btn-lg gradient-custom-4 text-body">
+                                        Update
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>
