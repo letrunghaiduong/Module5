@@ -1,0 +1,15 @@
+<h1>calculator</h1>
+<p>Number 1</p>
+<input [(ngModel)]="cal.number1">
+<br>
+<p>Number 2</p>
+<input [(ngModel)]="cal.number2">
+<br>
+<select #calculation (change)="calc(calculation.value)">
+  <option value="+">summation(+)</option>
+  <option value="-">Subtraction(-)</option>
+  <option value="*">multiplication(*)</option>
+  <option value="/">division(/)</option>
+</select>
+<br>
+<p>Result: {{cal.result}}</p>
