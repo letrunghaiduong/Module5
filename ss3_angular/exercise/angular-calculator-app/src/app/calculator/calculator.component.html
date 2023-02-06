@@ -1,9 +1,9 @@
 <h1>calculator</h1>
 <p>Number 1</p>
-<input [(ngModel)]="cal.number1">
+<input [(ngModel)]="cal.firstNumber">
 <br>
 <p>Number 2</p>
-<input [(ngModel)]="cal.number2">
+<input [(ngModel)]="cal.lastNumber">
 <br>
 <select #calculation (change)="calc(calculation.value)">
   <option value="+">summation(+)</option>
