@@ -9,25 +9,24 @@ import {Calculator} from '../../model/calculator';
 export class CalculatorComponent implements OnInit {
 
   cal : Calculator = {
-    number1: 0,
-    number2: 0,
+    firstNumber: 0,
+    lastNumber: 0,
     result: 0
   }
 
   calc(calculation:string) {
     switch (calculation) {
       case "+":
-        this.cal.result = +this.cal.number1 + +this.cal.number2;
+        this.cal.result = +this.cal.firstNumber + +this.cal.lastNumber;
         break;
       case "-":
-        this.cal.result = this.cal.number1 - this.cal.number2;
+        this.cal.result = this.cal.firstNumber - this.cal.lastNumber;
         break;
       case "*":
-        this.cal.result = this.cal.number1 * this.cal.number2;
+        this.cal.result = this.cal.firstNumber * this.cal.lastNumber;
         break;
       case "/":
-        this.cal.result = this.cal.number1 / this.cal.number2;
-        break;
+        this.cal.result = this.cal.firstNumber / this.cal.lastNumber;
     }
   }
 

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<h1 class="text-center">Contract</h1>
+
+<table class="table table-success table-striped" style="margin-top: 50px">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>StartDate</th>
+    <th>EndDate</th>
+    <th>Deposit</th>
+    <th>Customer Name</th>
+    <th>Employee Name</th>
+    <th>Facility Name</th>
+<!--    <th>Attach Facility</th>-->
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let con of contracts">
+    <td>{{con.id}}</td>
+    <td>{{con.startDate}}</td>
+    <td>{{con.endDate}}</td>
+    <td>{{con.deposit}}</td>
+    <td>{{con.customer.name}}</td>
+    <td>{{con.employee.name}}</td>
+    <td>{{con.facility.name}}</td>
+<!--    <td>-->
+<!--      <a type="button"-->
+<!--         class="btn btn-outline-success">-->
+<!--        +-->
+<!--      </a>-->
+<!--      <a class="btn btn-outline-success">-->
+<!--        List Attach Facility-->
+<!--      </a>-->
+<!--    </td>-->
+  </tr>
+  </tbody>
+</table>
+<app-footer></app-footer>

@@ -1,0 +1,85 @@
+<app-header></app-header>
+<h1 class="text-center">Customer</h1>
+
+<div class="justify-content-center col-md-6 d-flex float-end">
+
+    <input style="border-radius: 30px" class="form-control me-2" #name type="search"
+           placeholder="Name"
+           aria-label="Search">
+
+    <input style="border-radius: 30px" class="form-control me-2" #email type="search"
+           placeholder="Email"
+           aria-label="Search">
+
+    <select #customerType class="form-select" aria-label="Default select example" style="border-radius: 30px">
+      <option value = '' >--Customer Type--</option>
+      <option *ngFor="let c of customerTypes" [value]="c.name">{{c.name}}</option>
+    </select>
+
+    <button style="border-radius: 30px" class="btn btn-outline-success me-2" (click)="getAll(name.value,email.value,customerType.value)">Search</button>
+</div>
+
+<a class="btn btn-outline-success" [routerLink]="['/customer/create']">Add Customer</a>
+
+<table class="table table-success table-striped" style="margin-top: 50px">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Gender</th>
+      <th>Id Card</th>
+      <th>Date Of Birth</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Customer Type</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cus of customers | paginate: {itemsPerPage: 5,currentPage: p}" >
+      <td>{{cus.id}}</td>
+      <td>{{cus.name}}</td>
+      <td>{{cus.customerCode}}</td>
+      <td>{{cus.gender ? 'Nam':'Nữ'}}</td>
+      <td>{{cus.idCard}}</td>
+      <td>{{cus.dateOfBirth}}</td>
+      <td>{{cus.email}}</td>
+      <td>{{cus.address}}</td>
+      <td>{{cus.phoneNumber}}</td>
+      <td>{{cus.customerType?.name}}</td>
+      <td>
+        <button class="btn btn-outline-success" [routerLink]="['/customer/edit',cus.id]" >Edit</button>
+      </td>
+      <td>
+        <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = cus">
+          Delete
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+<!--modal delete-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-keyboard="false" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p >Bạn có chắc muốn xóa thông tin của: "{{temp.name}}"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteCustomer()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,5 +1,5 @@
 export interface Calculator {
-  number1: number;
-  number2: number;
+  firstNumber: number;
+  lastNumber: number;
   result: number;
 }
