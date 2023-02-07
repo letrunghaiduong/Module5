@@ -15,7 +15,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let con of contracts">
+  <tr *ngFor="let con of contracts| paginate: {itemsPerPage: 5,currentPage: p}">
     <td>{{con.id}}</td>
     <td>{{con.startDate}}</td>
     <td>{{con.endDate}}</td>
@@ -35,4 +35,6 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
+
 <app-footer></app-footer>

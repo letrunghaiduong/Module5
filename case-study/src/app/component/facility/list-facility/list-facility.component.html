@@ -1,25 +1,34 @@
 <app-header></app-header>
 <h1 class="text-center  m-0">Facility</h1>
 <div class="row m-0">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-    <div class="card-group">
-      <div class="card" *ngFor="let item of facilities">
-        <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/86/2018/12/18015307/Superior-king-bed-room-cottage-at-pullman-danang-beach-resort-vietnam.jpg"
-             class="card-img-top" alt="...">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="row">
+      <div class="btn card col-md-4" *ngFor="let item of facilities" (click)="temp = item" data-bs-toggle="modal"
+           data-bs-target="#exampleModalInfo">
+        <img
+          src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/86/2018/12/18015307/Superior-king-bed-room-cottage-at-pullman-danang-beach-resort-vietnam.jpg"
+          class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{item.name}}</h5>
-          <p class="card-text">Dien tich: {{item.area}}</p>
+          <p class="card-text">Room size: {{item.area}}m2</p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
-        <button class="btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  (click)="temp = item">
-          Delete
-        </button>
+        <div class="row">
+          <a class="btn btn-outline-success col-md-6" data-bs-toggle="modal" data-bs-target="#exampleModal"
+             (click)="temp = item">
+            Delete
+          </a>
+          <button class="btn btn-outline-success col-md-6" [routerLink]="['/facility/edit',temp.id]">Edit</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-2"></div>
+  <div class="col-md-1"></div>
 </div>
+
+<!--Info-->
+<app-info-facility [temp]="temp"></app-info-facility>
 
 
 <!--modal delete-->
@@ -30,8 +39,8 @@
       <div class="modal-header">
       </div>
       <div class="modal-body">
-        <h3 class="text-danger text-center">Bạn có chắc muốn xóa thông tin của:</h3>
-        <div class="row text-primary">
+        <h3>Bạn có chắc muốn xóa thông tin của:</h3>
+        <div class="row">
           <div class="col-9"><h4>{{temp.name}}</h4></div>
         </div>
       </div>
@@ -44,4 +53,5 @@
     </div>
   </div>
 </div>
+<br>
 <app-footer></app-footer>

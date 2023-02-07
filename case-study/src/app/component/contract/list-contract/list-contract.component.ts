@@ -121,6 +121,7 @@ export class ListContractComponent implements OnInit {
       }
     },
   ]
+  p = 1;
   constructor() { }
 
   ngOnInit(): void {

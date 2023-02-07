@@ -17,6 +17,7 @@ import {FooterComponent} from './component/footer/footer.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { InfoFacilityComponent } from './component/facility/info-facility/info-facility.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CreateFacilityComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    InfoFacilityComponent
   ],
   imports: [
     BrowserModule,

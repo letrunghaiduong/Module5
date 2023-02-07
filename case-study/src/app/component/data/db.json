@@ -198,27 +198,6 @@
       "numberOfFloors": 0,
       "facilityFree": "1 xe máy, 1 xe đạp",
       "flagDelete": false
-    },
-    {
-      "id": 4,
-      "name": "Villa No Beach Front",
-      "area": 22000,
-      "cost": 9000000,
-      "maxPeople": 8,
-      "facilityType": {
-        "id": 1,
-        "name": "villa"
-      },
-      "rentType": {
-        "id": 1,
-        "name": "year"
-      },
-      "standardRoom": "normal",
-      "descriptionOtherConvenience": "Có hồ bơi",
-      "poolArea": 300,
-      "numberOfFloors": 3,
-      "facilityFree": "",
-      "flagDelete": false
     }
   ],
   "rent-type": [

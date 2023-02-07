@@ -26,7 +26,9 @@ export class CustomerService {
     return this.httpClient.delete<Customer>(this.API_URL + `/` + id);
   }
 
-  saveCustomer(customer: Customer): Observable<Customer> {
+  saveCustomer(customer: Customer
+
+  ): Observable<Customer> {
     return this.httpClient.post<Customer>(this.API_URL, customer);
   }
 
