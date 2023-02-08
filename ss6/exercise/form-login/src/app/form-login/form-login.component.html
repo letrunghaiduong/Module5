@@ -1,0 +1,72 @@
+<section class="vh-100 bg-image"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form [formGroup]="formLogin">
+                <div class="form-outline mb-4">
+                  <label>Email</label>
+                  <span style="color: red" *ngIf="formLogin.controls.email.hasError('required')&&formLogin.controls.email.touched">Không được để trống</span>
+                  <span style="color: red" *ngIf="formLogin.controls.email.hasError('email')">Không đúng định dạng</span>
+                  <input formControlName="email">
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label>Password</label>
+                  <span style="color: red" *ngIf="formLogin.controls.password.hasError('required')&&formLogin.controls.password.touched">Không được để trống</span>
+                  <span style="color: red" *ngIf="formLogin.controls.password.hasError('minlength')">Password quá ngắn</span>
+                  <input formControlName="password">
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label>Confirm password</label>
+                  <span style="color: red" *ngIf="formLogin.controls.confirmPassword.hasError('required')&&formLogin.controls.confirmPassword.touched">Không được để trống</span>
+                  <span style="color: red" *ngIf="formLogin.controls.confirmPassword.hasError('minlength')">Password quá ngắn</span>
+                  <span style="color: red" *ngIf="formLogin.controls.confirmPassword.hasError('checkPassword')">Không trùng password</span>
+                  <input formControlName="confirmPassword">
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label>Country</label>
+                  <span style="color: red" *ngIf="formLogin.controls.country.hasError('required')&&formLogin.controls.country.touched">Không được để trống</span>
+                  <select formControlName="country">
+                    <option value="Đà Nẵng">Đà Nẵng</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
+                  </select>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label>Age</label>
+                  <span style="color: red" *ngIf="formLogin.controls.age.hasError('required')&&formLogin.controls.age.touched">Không được để trống</span>
+                  <span style="color: red" *ngIf="formLogin.controls.age.hasError('min')">Không đủ tuổi</span>
+                  <input formControlName="age">
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label>Gender:</label>
+                  <span style="color: red" *ngIf="formLogin.controls.gender.hasError('required')&&formLogin.controls.gender.touched">Không được để trống</span>
+                  <span>Nam</span> <input formControlName="gender" type="radio" value="Nam">
+                  <span>Nữ</span> <input formControlName="gender" type="radio" value="Nữ">
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label>Phone</label>
+                  <span style="color: red" *ngIf="formLogin.controls.phone.hasError('required')&&formLogin.controls.phone.touched">Không được để trống</span>
+                  <input formControlName="phone">
+                </div>
+
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

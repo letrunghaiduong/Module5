@@ -1,25 +1,27 @@
 <app-header></app-header>
-<h1 class="text-center  m-0">Facility</h1>
+<br>
 <div class="row m-0">
   <div class="col-md-1"></div>
   <div class="col-md-10">
     <div class="row">
-      <div class="btn card col-md-4" *ngFor="let item of facilities" (click)="temp = item" data-bs-toggle="modal"
-           data-bs-target="#exampleModalInfo">
-        <img
-          src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/86/2018/12/18015307/Superior-king-bed-room-cottage-at-pullman-danang-beach-resort-vietnam.jpg"
-          class="card-img-top" alt="...">
+      <div class="card col-md-4" *ngFor="let item of facilities">
+        <img  (click)="temp = item" data-bs-toggle="modal"
+              data-bs-target="#exampleModalInfo"
+          src="{{item.img}}"
+          class="btn card-img-top" alt="..." style="height: 100%">
         <div class="card-body">
           <h5 class="card-title">{{item.name}}</h5>
           <p class="card-text">Room size: {{item.area}}m2</p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
-        <div class="row">
-          <a class="btn btn-outline-success col-md-6" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        <div class="row d-flex justify-content-center">
+          <a class="btn btn-outline-success w-25 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
              (click)="temp = item">
             Delete
           </a>
-          <button class="btn btn-outline-success col-md-6" [routerLink]="['/facility/edit',temp.id]">Edit</button>
+          <a class="btn btn-outline-success w-25 m-2" [routerLink]="['/facility/edit',temp.id]">
+            Edit
+          </a>
         </div>
       </div>
     </div>
@@ -55,3 +57,4 @@
 </div>
 <br>
 <app-footer></app-footer>
+

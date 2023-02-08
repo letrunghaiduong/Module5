@@ -155,7 +155,8 @@
       "poolArea": 500,
       "numberOfFloors": 4,
       "facilityFree": "",
-      "flagDelete": false
+      "flagDelete": false,
+      "img": "https://file4.batdongsan.com.vn/2020/06/03/JGcIp0rf/20200603142344-7089.jpg"
     },
     {
       "id": 2,
@@ -176,7 +177,8 @@
       "poolArea": 0,
       "numberOfFloors": 3,
       "facilityFree": "",
-      "flagDelete": false
+      "flagDelete": false,
+      "img": "https://www.bhg.com/thmb/0Fg0imFSA6HVZMS2DFWPvjbYDoQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
     },
     {
       "id": 3,
@@ -197,7 +199,8 @@
       "poolArea": 0,
       "numberOfFloors": 0,
       "facilityFree": "1 xe máy, 1 xe đạp",
-      "flagDelete": false
+      "flagDelete": false,
+      "img": "https://www.thespruce.com/thmb/2_Q52GK3rayV1wnqm6vyBvgI3Ew=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg"
     }
   ],
   "rent-type": [

@@ -15,4 +15,5 @@ export interface Facility {
   numberOfFloors?: number;
   facilityFree?: string;
   flagDelete?: boolean;
+  img?:string;
 }
