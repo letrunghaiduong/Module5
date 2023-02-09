@@ -34,9 +34,8 @@
                 <div class="form-outline mb-4">
                   <label>Country</label>
                   <select formControlName="country">
-                    <option value="Đà Nẵng">Đà Nẵng</option>
-                    <option value="Hà Nội">Hà Nội</option>
-                    <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
+                    <option value="">---Country---</option>
+                    <option *ngFor="let item of countryList" [ngValue]="item">{{item.name}}</option>
                   </select>
                   <span style="color: red" *ngIf="formLogin.controls.country.hasError('required')&&formLogin.controls.country.touched">Không được để trống</span>
                 </div>
