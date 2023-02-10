@@ -55,7 +55,6 @@ export class EditCustomerComponent implements OnInit {
 
   submit() {
     const customer = this.formUpdateCustomer.value;
-    console.log(customer);
     this.customerService.updateCustomer(customer.id, customer).subscribe(data =>{
       this.router.navigate(['customer/list']);
       alert('Update success');

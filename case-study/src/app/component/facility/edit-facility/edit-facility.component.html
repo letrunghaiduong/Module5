@@ -7,18 +7,24 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
-
+              <button class="btn btn-outline-success" [routerLink]="['/customer/list']">Customer List</button>
               <h2 class="text-uppercase text-center mb-5">Edit facility</h2>
 
-              <form action="@{/facility/update}"  method="post">
+              <form action="" method="post" *ngIf="formEditFacility" [formGroup]="formEditFacility" (ngSubmit)="update()">
+
                 <input type="hidden" name="id" >
                 <div class="form-outline mb-4">
                   <label class="form-label">FacilityType</label>
-                  <input  class="form-select" style="width: 300px"
-                          readonly>
+                  <select class="form-select" formControlName="facilityType" [compareWith]="compareWith">
+                    <option value=""></option>
+                    <option *ngFor="let item of facilityTypes" [ngValue]="item">
+                      {{item.name}}
+                    <option>
+                  </select>
+                  <span style="color: red" *ngIf="formEditFacility.controls.facilityType.hasError('required')&&formEditFacility.controls.facilityType.touched">Không được để trống</span>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="text" class="form-control form-control-lg"/>
+                  <input type="text" class="form-control form-control-lg" formControlName="name"/>
                   <label class="form-label">Name</label>
                 </div>
                 <div class="form-outline mb-4">
