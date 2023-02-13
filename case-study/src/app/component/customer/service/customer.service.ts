@@ -15,7 +15,7 @@ export class CustomerService {
 
   getAll(name: string, email:string, customerType: string): Observable<Customer[]>{
     console.log(name,email,customerType);
-    return this.httpClient.get<Customer[]>('http://localhost:3000/customer?name_like='+ name + '&email_like=' +email+ '&customerType.name_like='+customerType);
+    return this.httpClient.get<Customer[]>(this.API_URL+ '?name_like='+ name + '&email_like=' +email+ '&customerType.name_like='+customerType);
   }
 
   getAllCustomerType(): Observable<CustomerType[]>{

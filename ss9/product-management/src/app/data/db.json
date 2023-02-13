@@ -53,6 +53,13 @@
         "id": 3,
         "name": "LG"
       }
+    },
+    {
+      "id": 5,
+      "name": null,
+      "price": null,
+      "description": null,
+      "category": null
     }
   ]
 }

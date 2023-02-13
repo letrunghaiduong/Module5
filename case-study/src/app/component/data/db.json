@@ -4,8 +4,8 @@
       "id": 1,
       "customerCode": "KH-1111",
       "customerType": {
-        "id": 4,
-        "name": "Silver"
+        "id": 1,
+        "name": "Diamond"
       },
       "name": "Nguyễn Thị Hào",
       "dateOfBirth": "1970-11-07",
@@ -111,6 +111,18 @@
       "email": "kimcuong84@gmail.com",
       "address": "K123/45 Lê Lợi, Hồ Chí Minh",
       "flagDelete": false
+    },
+    {
+      "id": 8,
+      "name": "",
+      "customerCode": "",
+      "dateOfBirth": "",
+      "idCard": "",
+      "phoneNumber": "",
+      "gender": "",
+      "email": "",
+      "address": "",
+      "customerType": ""
     }
   ],
   "customerType": [

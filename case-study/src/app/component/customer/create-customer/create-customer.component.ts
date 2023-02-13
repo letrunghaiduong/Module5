@@ -12,11 +12,12 @@ import {Router} from '@angular/router';
 export class CreateCustomerComponent implements OnInit {
   customerTypes: CustomerType[] = [];
   formCreateCustomer: FormGroup;
+  clickButton = false;
 
   constructor(private customerService: CustomerService,
               private router: Router) {
     this.formCreateCustomer = new FormGroup({
-      id: new FormControl("",[Validators.required]),
+      id: new FormControl(),
       name:new FormControl("",[Validators.required]),
       customerCode:new FormControl('',[Validators.required,Validators.pattern('KH-[0-9]{4}')]),
       dateOfBirth: new FormControl("",[Validators.required]),
@@ -37,10 +38,14 @@ export class CreateCustomerComponent implements OnInit {
 
 
   submit() {
-    const customer = this.formCreateCustomer.value;
-    this.customerService.saveCustomer(customer).subscribe(data=>{
-    });
-    alert('Add new success');
-    this.router.navigateByUrl('customer/list');
+    if (this.formCreateCustomer.valid){
+      const customer = this.formCreateCustomer.value;
+      this.customerService.saveCustomer(customer).subscribe(data=>{
+      });
+      alert('Add new success');
+      this.router.navigateByUrl('customer/list');
+    } else {
+      this.clickButton = true;
+    }
   }
 }

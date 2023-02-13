@@ -9,6 +9,7 @@ import {CustomerType} from '../../../../model/customer/customer-type';
   styleUrls: ['./list-customer.component.css']
 })
 export class ListCustomerComponent {
+
   customers: Customer[] = [];
   customerTypes: CustomerType[] = [];
   temp: Customer = {

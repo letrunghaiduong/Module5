@@ -13,8 +13,8 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let product of products; index as i">
-    <td>{{i + 1}}</td>
+  <tr *ngFor="let product of products | paginate: {itemsPerPage: 2,currentPage: p}">
+    <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
@@ -24,6 +24,7 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
 
 
 <!--modal delete-->

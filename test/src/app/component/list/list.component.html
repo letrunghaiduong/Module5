@@ -1,0 +1,19 @@
+<a class="btn btn-outline-success" [routerLink]="['create']"> Thêm mới</a>
+<table  class="table table-success table-striped">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+    <th>Date Of Birth</th>
+    <th>Class Name</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentList">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.dateOfBirth}}</td>
+      <td>{{student.className?.name}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -24,8 +24,6 @@ export class ProductEditComponent implements OnInit {
   });
 
   public compareWith(object1: Category, object2: Category)  {
-
-
     return object1 && object2 ? object1.id===object2.id : object1===object2;
   }
 

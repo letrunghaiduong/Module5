@@ -1,0 +1,54 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "Duong",
+      "dateOfBirth": "26/07/2001",
+      "className": {
+        "id": 1,
+        "name": "C07"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tan",
+      "dateOfBirth": "26/07/2001",
+      "className": {
+        "id": 2,
+        "name": "C08"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Phuong",
+      "dateOfBirth": "26/07/2001",
+      "className": {
+        "id": 1,
+        "name": "C07"
+      }
+    },
+    {
+      "id": 4,
+      "name": "abkca",
+      "dateOfBirth": "2023-02-17",
+      "className": {
+        "id": 1,
+        "name": "C07"
+      }
+    }
+  ],
+  "clazz": [
+    {
+      "id": 1,
+      "name": "C07"
+    },
+    {
+      "id": 2,
+      "name": "C08"
+    },
+    {
+      "id": 3,
+      "name": "C09"
+    }
+  ]
+}

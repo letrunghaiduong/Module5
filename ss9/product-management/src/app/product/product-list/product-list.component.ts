@@ -10,6 +10,7 @@ import {Product} from "../../model/product";
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
   temp: Product = {};
+  p= 1;
 
   constructor(private productService: ProductService) {
   }
@@ -32,7 +33,6 @@ export class ProductListComponent implements OnInit {
       }, error => {
 
       },()=>{
-
       })
     }
   }
