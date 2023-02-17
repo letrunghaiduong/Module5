@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerType} from '../../../../model/customer/customer-type';
 import {CustomerService} from '../service/customer.service';
 import {Router} from '@angular/router';
+import {Customer} from '../../../../model/customer/customer';
 
 @Component({
   selector: 'app-create-customer',
@@ -35,6 +36,7 @@ export class CreateCustomerComponent implements OnInit {
       this.customerTypes = customerType;
     })
   }
+
 
 
   submit() {

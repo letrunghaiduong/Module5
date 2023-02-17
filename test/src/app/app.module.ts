@@ -4,21 +4,31 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import { ListComponent } from './component/list/list.component';
-import { CreateComponent } from './component/create/create.component';
-import {ReactiveFormsModule} from "@angular/forms";
+
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NgxPaginationModule} from "ngx-pagination";
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { DanhSachBenhAnComponent } from './component/danh-sach-benh-an/danh-sach-benh-an.component';
+import { SuaBenhAnComponent } from './component/sua-benh-an/sua-benh-an.component';
+import { ThemMoiBenhAnComponent } from './component/them-moi-benh-an/them-moi-benh-an.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    CreateComponent
+    HeaderComponent,
+    FooterComponent,
+    DanhSachBenhAnComponent,
+    SuaBenhAnComponent,
+    ThemMoiBenhAnComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

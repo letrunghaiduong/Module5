@@ -1,54 +1,37 @@
 {
-  "student": [
+  "benhAn": [
     {
       "id": 1,
-      "name": "Duong",
-      "dateOfBirth": "26/07/2001",
-      "className": {
-        "id": 1,
-        "name": "C07"
-      }
+      "maBenhAn": "BA-001",
+      "maBenhNhan": "BN-345",
+      "tenBenhNhan": "Nguyen Ngoc Tan",
+      "ngayNhapVien": "2023-02-03",
+      "ngayRaVien": "2023-02-26",
+      "lyDoNhapVien": "Ung thư",
+      "phuongPhapDieuTri": "Mổ",
+      "bacSiDieuTri": "Lê Văn B"
     },
     {
       "id": 2,
-      "name": "Tan",
-      "dateOfBirth": "26/07/2001",
-      "className": {
-        "id": 2,
-        "name": "C08"
-      }
+      "maBenhAn": "BA-112",
+      "maBenhNhan": "BN-123",
+      "tenBenhNhan": "Nguyen Van B",
+      "ngayNhapVien": "2023-01-31",
+      "ngayRaVien": "2023-03-12",
+      "lyDoNhapVien": "Suy thận",
+      "phuongPhapDieuTri": "Chạy thận",
+      "bacSiDieuTri": "Nguyễn Đôn D"
     },
     {
       "id": 3,
-      "name": "Phuong",
-      "dateOfBirth": "26/07/2001",
-      "className": {
-        "id": 1,
-        "name": "C07"
-      }
-    },
-    {
-      "id": 4,
-      "name": "abkca",
-      "dateOfBirth": "2023-02-17",
-      "className": {
-        "id": 1,
-        "name": "C07"
-      }
-    }
-  ],
-  "clazz": [
-    {
-      "id": 1,
-      "name": "C07"
-    },
-    {
-      "id": 2,
-      "name": "C08"
-    },
-    {
-      "id": 3,
-      "name": "C09"
+      "maBenhAn": "BA-221",
+      "maBenhNhan": "BN-987",
+      "tenBenhNhan": "Tôn Nữ D",
+      "ngayNhapVien": "2022-08-18",
+      "ngayRaVien": "2023-03-05",
+      "lyDoNhapVien": "Covid",
+      "phuongPhapDieuTri": "Cách ly",
+      "bacSiDieuTri": "Lê Văn M"
     }
   ]
 }

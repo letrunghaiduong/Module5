@@ -16,8 +16,8 @@
                 <input type="hidden" formControlName="id" >
 
                 <div class="form-outline mb-4">
-                  <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.name.hasError('required')) || formCreateCustomer.controls.customerType.hasError('required')&&formCreateCustomer.controls.customerType.touched">Không được để trống</span>
                   <label for="customerType">CustomerType</label>
+                  <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.name.hasError('required')) || formCreateCustomer.controls.customerType.hasError('required')&&formCreateCustomer.controls.customerType.touched">Không được để trống</span>
                   <select id="customerType" formControlName="customerType" class="form-select">
                     <option value="">---CustomerType---</option>
                     <option *ngFor="let c of customerTypes" [ngValue]="c" >{{c.name}}</option>
@@ -32,6 +32,7 @@
 
                 <div class="form-outline mb-4">
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.customerCode.hasError('required')) || formCreateCustomer.controls.customerCode.hasError('required')&&formCreateCustomer.controls.customerCode.touched">Không được để trống</span>
+                  <br>
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.customerCode.hasError('required')) || formCreateCustomer.controls.customerCode.hasError('pattern')&&formCreateCustomer.controls.customerCode.touched">Không đúng định dạng</span>
                   <input type="text" placeholder="KH-XXXX" class="form-control form-control-lg" formControlName="customerCode"/>
                   <label class="form-label">Code</label>
@@ -44,15 +45,16 @@
                 </div>
 
                 <div class="form-outline mb-4">
-                  <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.gender.hasError('required')) || formCreateCustomer.controls.gender.hasError('required')&&formCreateCustomer.controls.gender.touched">Không được để trống</span>
-                  <label class="form-label">Gender
-                    <input type="radio" formControlName="gender" value="0" style="margin-left: 10px">Nam
-                    <input type="radio" formControlName="gender" value="1" style="margin-left: 10px">Nữ
+                  <label class="form-label">Gender:
+                    <input type="radio" formControlName="gender" [value]=true style="margin-left: 15px"> Nam
+                    <input type="radio" formControlName="gender" [value]=false style="margin-left: 15px"> Nữ
                   </label>
+                  <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.gender.hasError('required')) || formCreateCustomer.controls.gender.hasError('required')&&formCreateCustomer.controls.gender.touched">Không được để trống</span>
                 </div>
 
                 <div class="form-outline mb-4">
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.idCard.hasError('required')) || formCreateCustomer.controls.idCard.hasError('required')&&formCreateCustomer.controls.idCard.touched">Không được để trống</span>
+                  <br>
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.idCard.hasError('required')) || formCreateCustomer.controls.idCard.hasError('pattern')&&formCreateCustomer.controls.idCard.touched">Không đúng định dạng</span>
                   <input type="text"class="form-control form-control-lg"  formControlName="idCard"/>
                   <label class="form-label">Id Card</label>
@@ -60,6 +62,7 @@
 
                 <div class="form-outline mb-4">
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.phoneNumber.hasError('required')) || formCreateCustomer.controls.phoneNumber.hasError('required')&&formCreateCustomer.controls.phoneNumber.touched">Không được để trống</span>
+                  <br>
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.phoneNumber.hasError('required')) || formCreateCustomer.controls.phoneNumber.hasError('pattern')&&formCreateCustomer.controls.phoneNumber.touched">Không đúng định dạng</span>
                   <input type="text" class="form-control form-control-lg"  formControlName="phoneNumber"/>
                   <label class="form-label">Phone Number</label>
@@ -67,6 +70,7 @@
 
                 <div class="form-outline mb-4">
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.email.hasError('required')) || formCreateCustomer.controls.email.hasError('required')&&formCreateCustomer.controls.email.touched">Không được để trống</span>
+                  <br>
                   <span style="color: red" *ngIf="(clickButton && formCreateCustomer.controls.email.hasError('email')) || formCreateCustomer.controls.email.hasError('email')&&formCreateCustomer.controls.email.touched">Không đúng định dạng</span>
                   <input type="text" placeholder="abczyz@gmail.com" class="form-control form-control-lg" formControlName="email"/>
                   <label class="form-label">Email</label>

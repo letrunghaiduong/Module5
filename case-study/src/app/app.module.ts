@@ -14,7 +14,7 @@ import {CreateFacilityComponent} from './component/facility/create-facility/crea
 import {HomeComponent} from './component/home/home.component';
 import {HeaderComponent} from './component/header/header.component';
 import {FooterComponent} from './component/footer/footer.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { InfoFacilityComponent } from './component/facility/info-facility/info-facility.component';
@@ -40,7 +40,8 @@ import { InfoFacilityComponent } from './component/facility/info-facility/info-f
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

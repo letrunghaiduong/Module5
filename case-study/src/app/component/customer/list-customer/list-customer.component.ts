@@ -26,7 +26,6 @@ export class ListCustomerComponent {
     this.customerService.getAllCustomerType().subscribe(customerType =>{
       this.customerTypes = customerType;
     });
-
   }
 
   ngOnInit(): void {
@@ -52,4 +51,5 @@ export class ListCustomerComponent {
       })
     }
   }
+
 }

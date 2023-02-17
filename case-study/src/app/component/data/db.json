@@ -114,15 +114,18 @@
     },
     {
       "id": 8,
-      "name": "",
-      "customerCode": "",
-      "dateOfBirth": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "gender": "",
-      "email": "",
-      "address": "",
-      "customerType": ""
+      "name": "DUongg",
+      "customerCode": "KH-1233",
+      "dateOfBirth": "2023-02-02",
+      "idCard": "123123123",
+      "phoneNumber": "0321321321",
+      "gender": true,
+      "email": "123123123@gmail.com",
+      "address": "123",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
     }
   ],
   "customerType": [

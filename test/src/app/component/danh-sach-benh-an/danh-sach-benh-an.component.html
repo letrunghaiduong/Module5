@@ -1,0 +1,62 @@
+<button class="btn btn-primary ms-2 mb-1" routerLink="/create">Thêm mới bệnh án</button>
+<table  class="table table-success table-striped" style="margin-top: 50px; margin-bottom: 60px">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Mã bệnh án</th>
+    <th>Mã bệnh nhân</th>
+    <th>Tên bệnh nhân</th>
+    <th>Ngày nhập viện</th>
+    <th>Ngày ra viện</th>
+    <th>Lý do nhập viện</th>
+    <th>Phương pháp điều trị</th>
+    <th>Bác sĩ điều trị</th>
+    <th>Xóa</th>
+    <th>Sửa</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let benhAn of danhSach">
+    <td>{{benhAn.id}}</td>
+    <td>{{benhAn.maBenhAn}}</td>
+    <td>{{benhAn.maBenhNhan}}</td>
+    <td>{{benhAn.tenBenhNhan}}</td>
+    <td>{{benhAn.ngayNhapVien}}</td>
+    <td>{{benhAn.ngayRaVien}}</td>
+    <td>{{benhAn.lyDoNhapVien}}</td>
+    <td>{{benhAn.phuongPhapDieuTri}}</td>
+    <td>{{benhAn.bacSiDieuTri}}</td>
+    <td>
+      <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = benhAn">
+        Xóa
+      </a>
+    </td>
+    <td>
+      <button class="btn btn-outline-success" [routerLink]="['/suaBenhAn',benhAn.id]">Sửa</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<!--modal delete-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-keyboard="false" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p >Bạn có chắc muốn xóa thông tin bệnh án : {{temp.maBenhAn}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="xoaBenhAn()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
